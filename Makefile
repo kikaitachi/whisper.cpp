@@ -260,11 +260,6 @@ ifdef WHISPER_GPROF
 	CXXFLAGS += -pg
 endif
 
-ifneq ($(filter aarch64%,$(UNAME_M)),)
-	CFLAGS   += -mcpu=native
-	CXXFLAGS += -mcpu=native
-endif
-
 ifneq ($(filter armv6%,$(UNAME_M)),)
 	# 32-bit Raspberry Pi 1, 2, 3
 	CFLAGS += -mfpu=neon -mfp16-format=ieee -mno-unaligned-access
